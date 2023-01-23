@@ -1,0 +1,154 @@
+﻿@model WebApplication_Aimagambetov.Models.ViewModels.CalculationViewModel
+
+@{
+    ViewData["Title"] = "Результаты расчёта";
+}
+
+<div>
+
+    <h1 class="display-4 mb-5">Результат</h1>
+
+    @if (Model != null)
+    {
+        <form asp-action="SaveCalculate" asp-controller="Home" method="post">
+
+            <div class="mb-3">
+                <label for="m" class="form-label">Отношение теплоемкостей потоков m</label>
+                <input readonly type="text" class="form-control" name="m" id="m" value="@Model?.m.ToString("0.00")">
+            </div>
+
+            <div class="mb-3">
+                <label for="Y0" class="form-label">Полная относительная высота слоя Y0</label>
+                <input readonly type="text" class="form-control" name="Y0" id="Y0" value="@Model?.Y0.ToString("0.00")">
+            </div>
+
+            <div class="mb-3">
+                <table class="table table-bordered border-primary text-center">
+                    <tr>
+                        <th></th>
+                        <th colspan="@Model.ns.Count">Координаты у, м</th>
+
+                    </tr>
+                    <tr id="4">
+                        <th></th>
+                        @foreach (var item in Model?.ns)
+                        {
+                            <td>@item</td>
+                        }
+                    </tr>
+                    <tr>
+                        <th><img src="/img/1.jpg"></th>
+                        @foreach (var item in Model?.Ys)
+                        {
+                            <td>@item.ToString("0.00")</td>
+                        }
+                    </tr>
+                    <tr>
+                        <th><img src="/img/2.jpg"></th>
+                        @foreach (var item in Model?.ExpYs)
+                        {
+                            <td>@item.ToString("0.00")</td>
+                        }
+                    </tr>
+                    <tr>
+                        <th><img src="/img/3.jpg"></th>
+                        @foreach (var item in Model?.MexpYs)
+                        {
+                            <td>@item.ToString("0.00")</td>
+                        }
+                    </tr>
+                    <tr>
+                        <th><img src="/img/4.jpg"></th>
+                        @foreach (var item in Model?.Vs)
+                        {
+                            <td>@item.ToString("0.00")</td>
+                        }
+                    </tr>
+                    <tr>
+                        <th><img src="/img/5.jpg"></th>
+                        @foreach (var item in Model?.Os)
+                        {
+                            <td>@item.ToString("0.00")</td>
+                        }
+                    </tr>
+                    <tr id="1">
+                        <th><img src="/img/6.jpg"></th>
+                        @foreach (var item in Model?.tNachs)
+                        {
+                            <td>@item.ToString("0")</td>
+                        }
+                    </tr>
+                    <tr id="2">
+                        <th><img src="/img/7.jpg"></th>
+                        @foreach (var item in Model?.Ts)
+                        {
+                            <td>@item.ToString("0")</td>
+                        }
+                    </tr>
+                    <tr id="3">
+                        <th>Разность температур, °С</th>
+                        @foreach (var item in Model?.Raz)
+                        {
+                            <td>@item.ToString("0")</td>
+                        }
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div class="container d-grid gap-3 content mt-5 mb-5">
+
+                <div class="row justify-content-center mt-3">
+
+                    <div class="col-7 text-center">
+                        <p class="h4">Изменение температур материала и газа по высоте слоя</p>
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center mt-3">
+
+                    <canvas class="col-6 text-center" height="150" id="myChart"></canvas>
+
+                </div>
+
+                <div class="row justify-content-center mt-3">
+
+                    <div class="col-6 text-center">
+                        <p class="h4">Разность температур материала и газа по высоте слоя</p>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center mt-3">
+
+
+                    <canvas class="col-6 text-center" height="150" id="myChart2"></canvas>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Название расчёта</label>
+                    <input type="text" class="form-control" asp-for="Name">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-outline-success" value="Сохранить набор исходных данных" />
+                </div>
+
+            </div>
+
+            <input type="hidden" class="form-control" asp-for="H0">
+            <input type="hidden" class="form-control" asp-for="t_nachMat">
+            <input type="hidden" class="form-control" asp-for="T_nachTemp">
+            <input type="hidden" class="form-control" asp-for="Wg">
+            <input type="hidden" class="form-control" asp-for="Cg">
+            <input type="hidden" class="form-control" asp-for="Gm">
+            <input type="hidden" class="form-control" asp-for="Cm">
+            <input type="hidden" class="form-control" asp-for="aV">
+            <input type="hidden" class="form-control" asp-for="D">
+
+        </form>
+    }
+</div>
+

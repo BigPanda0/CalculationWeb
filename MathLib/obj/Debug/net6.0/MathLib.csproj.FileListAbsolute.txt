@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\bin\Debug\net6.0\MathLib.deps.json
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\bin\Debug\net6.0\MathLib.dll
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\bin\Debug\net6.0\MathLib.pdb
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\obj\Debug\net6.0\MathLib.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\obj\Debug\net6.0\MathLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\obj\Debug\net6.0\MathLib.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\obj\Debug\net6.0\MathLib.AssemblyInfo.cs
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\obj\Debug\net6.0\MathLib.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\obj\Debug\net6.0\MathLib.dll
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\obj\Debug\net6.0\refint\MathLib.dll
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\obj\Debug\net6.0\MathLib.pdb
+C:\Users\User\Desktop\WepAplication.Pr2\WebApplication_Aimagambetov\MathLib\obj\Debug\net6.0\ref\MathLib.dll

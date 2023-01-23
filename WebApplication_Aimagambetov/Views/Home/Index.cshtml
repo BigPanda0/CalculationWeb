@@ -1,0 +1,51 @@
+﻿@model WebApplication_Aimagambetov.Models.ViewModels.CalculationViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <h1 class="display-4 mb-5">Исходные данные</h1>
+    <form asp-action="Calculation" asp-controller="Home" method="post">
+        <div class="mb-3">
+            <label for="H0" class="form-label">Высота слоя H0, м</label>
+            <input type="text" class="form-control" asp-for="H0">
+        </div>
+        <div class="mb-3">
+            <label for="t_nachMat" class="form-label">Начальная температура материала t', 0С</label>
+            <input type="text" class="form-control" asp-for="t_nachMat">
+        </div>
+        <div class="mb-3">
+            <label for="T_nachTemp" class="form-label">Начальная температура газа T', 0С</label>
+            <input type="text" class="form-control" asp-for="T_nachTemp">
+        </div>
+        <div class="mb-3">
+            <label for="Wg" class="form-label">Скорость газа на свободное сечение шахты Wг, м/с</label>
+            <input type="text" class="form-control" asp-for="Wg">
+        </div>
+        <div class="mb-3">
+            <label for="Cg" class="form-label">Средняя теплоемкость газа Cг, кДж/(м3 • К)</label>
+            <input type="text" class="form-control" asp-for="Cg">
+        </div>
+        <div class="mb-3">
+            <label for="Gm" class="form-label">Расход материалов,Gм кг/с</label>
+            <input type="text" class="form-control" asp-for="Gm">
+        </div>
+        <div class="mb-3">
+            <label for="Cm" class="form-label">Теплоемкость материалов Cм, кДж/(кг • К)</label>
+            <input type="text" class="form-control" asp-for="Cm">
+        </div>
+        <div class="mb-3">
+            <label for="aV" class="form-label">Объемный коэффициент теплоотдачи aV, Вт/(м3 • К)</label>
+            <input type="text" class="form-control" asp-for="aV">
+        </div>
+        <div class="mb-3">
+            <label for="D" class="form-label">Диаметр аппарата D, м</label>
+            <input type="text" class="form-control" asp-for="D">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="form-control col-2 btn btn-outline-success" value="Рассчитать" />
+        </div>
+    </form>
+</div>
+
